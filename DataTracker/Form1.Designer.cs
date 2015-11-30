@@ -42,6 +42,10 @@
             this.paidColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dueDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.checkForUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hourlyUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.isOnclickToToggleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPageAppendRow = new System.Windows.Forms.TabPage();
             this.label10 = new System.Windows.Forms.Label();
             this.cbPercentPaid = new System.Windows.Forms.TextBox();
@@ -64,22 +68,25 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.checkForUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.updateTimer = new System.Windows.Forms.Timer(this.components);
-            this.hourlyUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.isOnclickToToggleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonBUG = new System.Windows.Forms.Button();
+            this.box_BUG = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
-            this.tabPageAppendRow.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            this.tabPageAppendRow.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPageMain);
             this.tabControl1.Controls.Add(this.tabPageAppendRow);
+            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.HotTrack = true;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
@@ -205,6 +212,37 @@
             // 
             this.dueDateColumn.HeaderText = "Due";
             this.dueDateColumn.Name = "dueDateColumn";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.checkForUpdateToolStripMenuItem,
+            this.hourlyUpdatesToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.ShowImageMargin = false;
+            this.contextMenuStrip1.Size = new System.Drawing.Size(141, 48);
+            // 
+            // checkForUpdateToolStripMenuItem
+            // 
+            this.checkForUpdateToolStripMenuItem.Name = "checkForUpdateToolStripMenuItem";
+            this.checkForUpdateToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.checkForUpdateToolStripMenuItem.Text = "Check for update";
+            this.checkForUpdateToolStripMenuItem.Click += new System.EventHandler(this.checkForUpdateToolStripMenuItem_Click);
+            // 
+            // hourlyUpdatesToolStripMenuItem
+            // 
+            this.hourlyUpdatesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.isOnclickToToggleToolStripMenuItem});
+            this.hourlyUpdatesToolStripMenuItem.Name = "hourlyUpdatesToolStripMenuItem";
+            this.hourlyUpdatesToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.hourlyUpdatesToolStripMenuItem.Text = "Hourly Updates";
+            // 
+            // isOnclickToToggleToolStripMenuItem
+            // 
+            this.isOnclickToToggleToolStripMenuItem.Name = "isOnclickToToggleToolStripMenuItem";
+            this.isOnclickToToggleToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.isOnclickToToggleToolStripMenuItem.Text = "is on(click to toggle)";
+            this.isOnclickToToggleToolStripMenuItem.Click += new System.EventHandler(this.isOnclickToToggleToolStripMenuItem_Click);
             // 
             // tabPageAppendRow
             // 
@@ -449,41 +487,60 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
             // 
-            // contextMenuStrip1
+            // tabPage1
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.checkForUpdateToolStripMenuItem,
-            this.hourlyUpdatesToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.ShowImageMargin = false;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(141, 70);
+            this.tabPage1.Controls.Add(this.box_BUG);
+            this.tabPage1.Controls.Add(this.buttonBUG);
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(950, 262);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "S/BR";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // checkForUpdateToolStripMenuItem
+            // label12
             // 
-            this.checkForUpdateToolStripMenuItem.Name = "checkForUpdateToolStripMenuItem";
-            this.checkForUpdateToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.checkForUpdateToolStripMenuItem.Text = "Check for update";
-            this.checkForUpdateToolStripMenuItem.Click += new System.EventHandler(this.checkForUpdateToolStripMenuItem_Click);
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(399, 3);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(26, 13);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Bug";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(3, 3);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 13);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Submission";
             // 
             // updateTimer
             // 
             this.updateTimer.Interval = 3600000;
             this.updateTimer.Tick += new System.EventHandler(this.updateTimer_Tick);
             // 
-            // hourlyUpdatesToolStripMenuItem
+            // buttonBUG
             // 
-            this.hourlyUpdatesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.isOnclickToToggleToolStripMenuItem});
-            this.hourlyUpdatesToolStripMenuItem.Name = "hourlyUpdatesToolStripMenuItem";
-            this.hourlyUpdatesToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.hourlyUpdatesToolStripMenuItem.Text = "Hourly Updates";
+            this.buttonBUG.Location = new System.Drawing.Point(402, 81);
+            this.buttonBUG.Name = "buttonBUG";
+            this.buttonBUG.Size = new System.Drawing.Size(75, 23);
+            this.buttonBUG.TabIndex = 2;
+            this.buttonBUG.Text = "buttonBUG";
+            this.buttonBUG.UseVisualStyleBackColor = true;
+            this.buttonBUG.Click += new System.EventHandler(this.buttonBUG_Click);
             // 
-            // isOnclickToToggleToolStripMenuItem
+            // box_BUG
             // 
-            this.isOnclickToToggleToolStripMenuItem.Name = "isOnclickToToggleToolStripMenuItem";
-            this.isOnclickToToggleToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.isOnclickToToggleToolStripMenuItem.Text = "is on(click to toggle)";
-            this.isOnclickToToggleToolStripMenuItem.Click += new System.EventHandler(this.isOnclickToToggleToolStripMenuItem_Click);
+            this.box_BUG.Location = new System.Drawing.Point(402, 36);
+            this.box_BUG.Multiline = true;
+            this.box_BUG.Name = "box_BUG";
+            this.box_BUG.Size = new System.Drawing.Size(100, 20);
+            this.box_BUG.TabIndex = 3;
             // 
             // Form1
             // 
@@ -499,9 +556,11 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPageMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.tabPageAppendRow.ResumeLayout(false);
             this.tabPageAppendRow.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -547,6 +606,11 @@
         public System.Windows.Forms.Timer updateTimer;
         private System.Windows.Forms.ToolStripMenuItem hourlyUpdatesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem isOnclickToToggleToolStripMenuItem;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox box_BUG;
+        private System.Windows.Forms.Button buttonBUG;
     }
 }
 

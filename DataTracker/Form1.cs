@@ -263,5 +263,10 @@ namespace DataTracker
                 Properties.Settings.Default.CheckHourly = true;
             }
         }
+
+        private void buttonBUG_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
