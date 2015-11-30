@@ -266,7 +266,7 @@ namespace DataTracker
 
         private void buttonBUG_Click(object sender, EventArgs e)
         {
-
+            string problem = box_BUG.Text;
         }
     }
 }
