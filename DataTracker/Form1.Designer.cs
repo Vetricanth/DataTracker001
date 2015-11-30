@@ -69,11 +69,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.buttonSuggestions = new System.Windows.Forms.Button();
+            this.SuggestionBox = new System.Windows.Forms.TextBox();
+            this.box_BUG = new System.Windows.Forms.TextBox();
+            this.buttonBUG = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.updateTimer = new System.Windows.Forms.Timer(this.components);
-            this.buttonBUG = new System.Windows.Forms.Button();
-            this.box_BUG = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
@@ -489,6 +492,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label13);
+            this.tabPage1.Controls.Add(this.buttonSuggestions);
+            this.tabPage1.Controls.Add(this.SuggestionBox);
             this.tabPage1.Controls.Add(this.box_BUG);
             this.tabPage1.Controls.Add(this.buttonBUG);
             this.tabPage1.Controls.Add(this.label12);
@@ -500,6 +506,41 @@
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "S/BR";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // buttonSuggestions
+            // 
+            this.buttonSuggestions.Location = new System.Drawing.Point(8, 81);
+            this.buttonSuggestions.Name = "buttonSuggestions";
+            this.buttonSuggestions.Size = new System.Drawing.Size(75, 23);
+            this.buttonSuggestions.TabIndex = 5;
+            this.buttonSuggestions.Text = "SuggestionButton";
+            this.buttonSuggestions.UseVisualStyleBackColor = true;
+            // 
+            // SuggestionBox
+            // 
+            this.SuggestionBox.Location = new System.Drawing.Point(6, 19);
+            this.SuggestionBox.Multiline = true;
+            this.SuggestionBox.Name = "SuggestionBox";
+            this.SuggestionBox.Size = new System.Drawing.Size(260, 56);
+            this.SuggestionBox.TabIndex = 4;
+            // 
+            // box_BUG
+            // 
+            this.box_BUG.Location = new System.Drawing.Point(402, 19);
+            this.box_BUG.Multiline = true;
+            this.box_BUG.Name = "box_BUG";
+            this.box_BUG.Size = new System.Drawing.Size(260, 56);
+            this.box_BUG.TabIndex = 3;
+            // 
+            // buttonBUG
+            // 
+            this.buttonBUG.Location = new System.Drawing.Point(402, 81);
+            this.buttonBUG.Name = "buttonBUG";
+            this.buttonBUG.Size = new System.Drawing.Size(75, 23);
+            this.buttonBUG.TabIndex = 2;
+            this.buttonBUG.Text = "buttonBUG";
+            this.buttonBUG.UseVisualStyleBackColor = true;
+            this.buttonBUG.Click += new System.EventHandler(this.buttonBUG_Click);
             // 
             // label12
             // 
@@ -515,32 +556,23 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(3, 3);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 13);
+            this.label11.Size = new System.Drawing.Size(65, 13);
             this.label11.TabIndex = 0;
-            this.label11.Text = "Submission";
+            this.label11.Text = "Suggestions";
             // 
             // updateTimer
             // 
             this.updateTimer.Interval = 3600000;
             this.updateTimer.Tick += new System.EventHandler(this.updateTimer_Tick);
             // 
-            // buttonBUG
+            // label13
             // 
-            this.buttonBUG.Location = new System.Drawing.Point(402, 81);
-            this.buttonBUG.Name = "buttonBUG";
-            this.buttonBUG.Size = new System.Drawing.Size(75, 23);
-            this.buttonBUG.TabIndex = 2;
-            this.buttonBUG.Text = "buttonBUG";
-            this.buttonBUG.UseVisualStyleBackColor = true;
-            this.buttonBUG.Click += new System.EventHandler(this.buttonBUG_Click);
-            // 
-            // box_BUG
-            // 
-            this.box_BUG.Location = new System.Drawing.Point(402, 36);
-            this.box_BUG.Multiline = true;
-            this.box_BUG.Name = "box_BUG";
-            this.box_BUG.Size = new System.Drawing.Size(100, 20);
-            this.box_BUG.TabIndex = 3;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(296, 152);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(115, 13);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Please use repsectfully";
             // 
             // Form1
             // 
@@ -611,6 +643,9 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox box_BUG;
         private System.Windows.Forms.Button buttonBUG;
+        private System.Windows.Forms.Button buttonSuggestions;
+        private System.Windows.Forms.TextBox SuggestionBox;
+        private System.Windows.Forms.Label label13;
     }
 }
 
